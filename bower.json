@@ -1,0 +1,23 @@
+{
+  "name": "geekon",
+  "version": "0.0.0",
+  "authors": [
+    "Andrey Soloviev <andreysoloweb@gmail.com>"
+  ],
+  "description": "simple sass framework",
+  "keywords": [
+    "css",
+    "sass",
+    "grid",
+    "framework"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/scriptology/geekon",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

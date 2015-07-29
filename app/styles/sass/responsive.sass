@@ -1,0 +1,95 @@
+=position-center($top, $left)
+  display: inline-block
+  position: absolute
+  top: $top
+  left: $left
+  -webkit-transform: translate(-$left, -$top)
+  -ms-transform: translate(-$left, -$top)
+  transform: translate(-$left, -$top)
+
+.position-center-y
+  +position-center(50%, 0)
+
+.position-center-y-x
+  +position-center(50%, 50%)
+
+@media (min-width: 568px)
+
+  .hide-sm
+    display: none
+  .show-sm
+    display: inline-block
+
+  .align-center-sm
+    text-align: center
+  .align-left-sm
+    text-align: left
+  .align-right-sm
+    text-align: right
+
+  .position-center-y-sm
+    +position-center(50%, 0)
+
+  .position-center-y-x-sm
+    +position-center(50%, 50%)
+
+
+@media (min-width: 768px)
+  .hide-md
+    display: none
+  .show-md
+    display: inline-block
+
+  .align-center-md
+    text-align: center
+  .align-left-md
+    text-align: left
+  .align-right-md
+    text-align: right
+
+  .position-center-y-md
+    +position-center(50%, 0)
+
+  .position-center-y-x-md
+    +position-center(50%, 50%)
+
+
+@media (min-width: 1024px)
+  .hide-lg
+    display: none
+  .show-lg
+    display: inline-block
+
+  .align-center-lg
+    text-align: center
+  .align-left-lg
+    text-align: left
+  .align-right-lg
+    text-align: right
+
+  .position-center-y-lg
+    +position-center(50%, 0)
+
+  .position-center-y-x-lg
+    +position-center(50%, 50%)
+
+@media (min-width: 1280px)
+  .hide-xl
+    display: none
+  .show-xl
+    display: inline-block
+
+  .align-center-xl
+    text-align: center
+  .align-left-xl
+    text-align: left
+  .align-right-xl
+    text-align: right
+
+  .position-center-y-xl
+    +position-center(50%, 0)
+
+  .position-center-y-x-xl
+    +position-center(50%, 50%)
+
+
