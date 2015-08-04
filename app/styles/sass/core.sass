@@ -2,12 +2,15 @@
   display: inline-block
   img
     display: block
-  &--circle
+    width: 100%
+  &.-circle
     overflow: hidden
     border-radius: 50%
 
 .margin-0
   margin: 0 !important
+.padding-0
+  padding: 0 !important
 
 =mixin-btn($bg, $bg_hover, $color, $border-color)
   background-color: $bg
@@ -51,39 +54,44 @@
   &:hover
     background-color: #e9e9e9
 
-  &.border-black
+  &.-border-black
     box-shadow: 0 0 0 1px #000000
-  &.border-white
+  &.-border-white
     box-shadow: 0 0 0 1px #ffffff
-  &.border-gray-1
+  &.-border-gray-1
     box-shadow: 0 0 0 1px #e6dfdf
 
-  &.btn-size-24
+  &.-size-20
+    line-height: 20px
+    padding: 0 12px
+  &.-size-24
     line-height: 24px
     padding: 0 15px
-  &.btn-size-28
+  &.-size-28
     line-height: 28px
     padding: 0 15px
-  &.btn-size-32
+  &.-size-32
     line-height: 32px
     padding: 0 15px
-  &.btn-size-38
+  &.-size-38
     line-height: 38px
     padding: 0 20px
 
-  &.blue
+  &.-black
+    +mixin-btn(#000000, #222222, #ffffff, #222222)
+  &.-blue
     +mixin-btn(#6797C1, #406789, #ffffff, #406789)
-  &.gray
+  &.-gray
     +mixin-btn(#F9F9F9, #ECECEC, #000000, #ECECEC)
-  &.red
+  &.-red
     +mixin-btn(#DE6B55, #cb624e, #ffffff, #cb624e)
-  &.orange
+  &.-orange
     +mixin-btn(#ff6000, #F45D02, #ffffff, #F45D02)
-  &.green
+  &.-green
     +mixin-btn(#8AC569, #77AF58, #ffffff, #77AF58)
-  &.white
+  &.-white
     +mixin-btn(#ffffff, #f9f7f5, #000000, #f9f7f5)
-  &.transparent
+  &.-transparent
     background: none
     &:hover
       background-color: rgba(255, 255, 255, 0.15)
@@ -157,7 +165,7 @@
 =padding($padding-y, $padding-x)
   padding: $padding-y $padding-x $padding-y $padding-x
 
-.-yx-padding
+.yx-padding
   &-5
     +padding(5px, 5px)
   &-10
@@ -171,7 +179,7 @@
   &-25
     +padding(25px, 25px)
 
-.-x-padding
+.x-padding
   &-5
     +padding(0px, 5px)
   &-10
@@ -184,7 +192,7 @@
   &-25
     +padding(0px, 25px)
 
-.-y-padding
+.y-padding
   &-5
     +padding(5px, 0)
   &-10
@@ -196,41 +204,52 @@
   &-25
     +padding(25px, 0)
 
+%container-box
+  padding-bottom: 20px
+  position: relative
+  &:last-child
+    padding-bottom: 0
+
 .container-box
   @extend %container-box
   &:last-child
     padding-bottom: 0
-  &--5
+  &-0
+    @extend %container-box 
+    padding-bottom: 0
+    &:last-child
+      padding-bottom: 0
+  &-5
     @extend %container-box
     padding-bottom: 5px
     &:last-child
       padding-bottom: 0
-  &--10
+  &-10
     @extend %container-box
     padding-bottom: 10px
     &:last-child
       padding-bottom: 0
-  &--20
+  &-20
     @extend %container-box
     padding-bottom: 20px
     &:last-child
       padding-bottom: 0
-  &--25
+  &-25
     @extend %container-box
     padding-bottom: 25px
     &:last-child
       padding-bottom: 0
-  &--30
+  &-30
     @extend %container-box
     padding-bottom: 30px
     &:last-child
       padding-bottom: 0
-  &--40
+  &-40
     @extend %container-box
     padding-bottom: 40px
     &:last-child
       padding-bottom: 0
-  &--50
+  &-50
     @extend %container-box
     padding-bottom: 50px
     &:last-child

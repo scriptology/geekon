@@ -1,0 +1,122 @@
+a
+  color: #000000
+  &.-black
+    color: black
+  &.-green
+    color: $color-green
+  &.-orange
+    color: $color-orange
+  &.-gray
+    color: #696969
+  &.-gray2
+    color: #626160
+  &.-gray3
+    color: #cac1c1
+  &:hover
+    text-decoration: none
+    color: #000000
+
+.color-black
+  color: black
+.color-green
+  color: $color-green
+.color-orange
+  color: $color-orange
+.color-gray
+  color: #696969
+.color-gray2
+  color: #626160
+.color-gray3
+  color: #cac1c1
+
+p
+  margin-bottom: 20px
+  &:last-child
+    margin-bottom: 0
+
+strong
+  font-weight: bold
+
+%link
+  cursor: pointer
+.link
+  @extend %link
+  &.-l
+    @extend %link
+    text-decoration: underline
+    span
+      text-decoration: underline
+    &:hover
+      text-decoration: none
+      span
+        text-decoration: none
+  &.-l-hover
+    @extend %link
+    text-decoration: none
+    span
+      text-decoration: none
+    &:hover
+      text-decoration: underline
+      span
+        text-decoration: underline
+  &.-l-none
+    @extend %link
+    text-decoration: none
+    span
+      text-decoration: none
+    &:hover
+      text-decoration: none
+      span
+        text-decoration: none  
+
+small
+  font-weight: 300
+
+// font-family
+.text-sans
+  font-family: "Open Sans"
+.text-serif
+  font-family: "Roboto Slab"
+.text-serif-2
+  font-family: "Roboto"
+
+// transform
+.uppercase
+  text-transform: uppercase
+
+// text weight
+.bold
+  font-weight: 700
+.thin
+  font-weight: 300
+
+=size($size)
+  font-size: $size + px
+  line-height: $size + 2 + px
+  margin-bottom: 0
+  @media (max-width: 568px)
+    @if $size >= 18
+      font-size: $size - 4 + px
+      line-height: $size + 2 + px
+
+@for $i from 8 through 45
+  .size-#{$i}
+    +size($i)
+
+.text-color-white
+  color: #ffffff !important
+.text-color-coffee
+  color: #b1a9a9 !important
+.text-color-coffee-dark
+  color: #605353 !important
+.text-color-gray
+  color: #898989 !important
+.text-color-orange
+  color: #ff6000 !important
+
+// transform
+.text-uppercase
+  text-transform: uppercase
+
+.text-top
+  vertical-align: text-top
