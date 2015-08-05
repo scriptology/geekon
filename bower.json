@@ -14,7 +14,8 @@
   "license": "MIT",
   "homepage": "https://github.com/scriptology/geekon",
   "main": [
-    "app/styles/importer.sass"
+    "dist/geekon.css",
+    "dist/geekon.min.css"
   ],
   "ignore": [
     "**/.*",
