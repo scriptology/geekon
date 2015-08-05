@@ -96,9 +96,6 @@
     &:hover
       background-color: rgba(255, 255, 255, 0.15)
 
-  &.color-white
-    color: #ffffff
-
   &.wide
     margin-left: 0
     margin-right: 0
@@ -119,27 +116,10 @@
   &.uppercase
     text-transform: uppercase
 
-  &.full
-    width: 100%
-    box-sizing: border-box
-
-  &.search
-    position: relative
-    padding-left: 42px
-    .fa
-      display: inline-block
-      position: absolute
-      left: 18px
-      top: 7px
-      font-size: 16px
-      margin: 0
-
-
-=box($padding-y, $padding-x)
-  padding: $padding-y $padding-x $padding-y $padding-x
-
 // padding
 =padding($t, $r, $b, $l)
+  box-sizing: border-box
+  position: relative
   @if $t
     @if $t != initial
       padding-top: $t + px
@@ -152,9 +132,6 @@
   @if $l
     @if $l != initial
       padding-left: $l + px
-
-  position: relative
-  box-sizing: border-box
 
 .container-box
   +padding(initial, initial, 20, initial)
@@ -186,26 +163,7 @@
   .padding-yx-#{$i}
     +padding($i, $i, $i, $i)
 
-
-// padding
-=padding($t, $r, $b, $l)
-  box-sizing: border-box
-  @if $t
-    @if $t != initial
-      padding-top: $t + px
-  @if $r
-    @if $r != initial
-      padding-right: $r + px
-  @if $b
-    @if $b != initial
-      padding-bottom: $b + px
-  @if $l
-    @if $l != initial
-      padding-left: $l + px
-
-  position: relative
-  box-sizing: border-box
-
+// container-box
 @for $i from 0 through 60
   .container-box-#{$i}
     +padding(inherit, inherit, $i, inherit)
@@ -285,6 +243,12 @@
 .background
   &-coffee
     background-color: #f5f3f2
+.background
+  &-black
+    background-color: #000000
+.white
+  &-white
+    background-color: #ffffff
 
 .wide
   margin-left: 0
