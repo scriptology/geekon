@@ -138,122 +138,153 @@
 =box($padding-y, $padding-x)
   padding: $padding-y $padding-x $padding-y $padding-x
 
-.l-box
-  +box(10px, 10px)
-  &--10
-    +box(5px, 5px)
-  &--15
-    +box(15px, 15px)
-  &--20
-    +box(20px, 20px)
-  &--25
-    +box(25px, 25px)
+// padding
+=padding($t, $r, $b, $l)
+  @if $t
+    @if $t != initial
+      padding-top: $t + px
+  @if $r
+    @if $r != initial
+      padding-right: $r + px
+  @if $b
+    @if $b != initial
+      padding-bottom: $b + px
+  @if $l
+    @if $l != initial
+      padding-left: $l + px
 
-.s-box
-  +box(0px, 10px)
-  &--5
-    +box(0px, 10px)
-  &--10
-    +box(0px, 10px)
-  &--15
-    +box(0px, 10px)
-  &--20
-    +box(0px, 10px)
-  &--25
-    +box(0px, 10px)
-
-=padding($padding-y, $padding-x)
-  padding: $padding-y $padding-x $padding-y $padding-x
-
-.yx-padding
-  &-5
-    +padding(5px, 5px)
-  &-10
-    +padding(10px, 10px)
-  &-15
-    +padding(15px, 15px)
-  &-18
-    +padding(18px, 18px)
-  &-20
-    +padding(20px, 20px)
-  &-25
-    +padding(25px, 25px)
-
-.x-padding
-  &-5
-    +padding(0px, 5px)
-  &-10
-    +padding(0px, 10px)
-  &-15
-    +padding(0px, 15px)
-
-  &-20
-    +padding(0px, 20px)
-  &-25
-    +padding(0px, 25px)
-
-.y-padding
-  &-5
-    +padding(5px, 0)
-  &-10
-    +padding(10px, 0)
-  &-15
-    +padding(15px, 0)
-  &-20
-    +padding(20px, 0)
-  &-25
-    +padding(25px, 0)
-
-%container-box
-  padding-bottom: 20px
   position: relative
-  &:last-child
-    padding-bottom: 0
+  box-sizing: border-box
 
 .container-box
-  @extend %container-box
+  +padding(initial, initial, 20, initial)
   &:last-child
-    padding-bottom: 0
-  &-0
-    @extend %container-box 
-    padding-bottom: 0
-    &:last-child
-      padding-bottom: 0
-  &-5
-    @extend %container-box
-    padding-bottom: 5px
-    &:last-child
-      padding-bottom: 0
-  &-10
-    @extend %container-box
-    padding-bottom: 10px
-    &:last-child
-      padding-bottom: 0
-  &-20
-    @extend %container-box
     padding-bottom: 20px
+  &:first-child
+    padding-bottom: 20px
+
+@for $i from 0 through 60
+  .container-box-#{$i}
+    +padding(inherit, inherit, $i, inherit)
     &:last-child
       padding-bottom: 0
-  &-25
-    @extend %container-box
-    padding-bottom: 25px
+    &:first-child
+      padding-bottom: $i + px
+
+  .padding-bottom-#{$i}
+    +padding(initial, initial, $i, initial)
+  .padding-top-#{$i}
+    +padding($i, initial, initial, initial)
+  .padding-left-#{$i}
+    +padding(initial, initial, initial, $i)
+  .padding-right-#{$i}
+    +padding(initial, $i, initial, initial)
+  .padding-y-#{$i}
+    +padding($i, initial, $i, initial)
+  .padding-x-#{$i}
+    +padding(initial, $i, initial, $i)
+  .padding-yx-#{$i}
+    +padding($i, $i, $i, $i)
+
+
+// padding
+=padding($t, $r, $b, $l)
+  box-sizing: border-box
+  @if $t
+    @if $t != initial
+      padding-top: $t + px
+  @if $r
+    @if $r != initial
+      padding-right: $r + px
+  @if $b
+    @if $b != initial
+      padding-bottom: $b + px
+  @if $l
+    @if $l != initial
+      padding-left: $l + px
+
+  position: relative
+  box-sizing: border-box
+
+@for $i from 0 through 60
+  .container-box-#{$i}
+    +padding(inherit, inherit, $i, inherit)
     &:last-child
       padding-bottom: 0
-  &-30
-    @extend %container-box
-    padding-bottom: 30px
-    &:last-child
-      padding-bottom: 0
-  &-40
-    @extend %container-box
-    padding-bottom: 40px
-    &:last-child
-      padding-bottom: 0
-  &-50
-    @extend %container-box
-    padding-bottom: 50px
-    &:last-child
-      padding-bottom: 0
+    &:first-child
+      padding-bottom: $i + px
+
+  .padding-bottom-#{$i}
+    +padding(initial, initial, $i, initial)
+  .padding-top-#{$i}
+    +padding($i, initial, initial, initial)
+  .padding-left-#{$i}
+    +padding(initial, initial, initial, $i)
+  .padding-right-#{$i}
+    +padding(initial, $i, initial, initial)
+  .padding-y-#{$i}
+    +padding($i, initial, $i, initial)
+  .padding-x-#{$i}
+    +padding(initial, $i, initial, $i)
+  .padding-yx-#{$i}
+    +padding($i, $i, $i, $i)
+
+//  min-height
+@for $i from 140 through 152
+  .min-height-#{$i}
+    min-height: $i + px
+
+  .min-height-sm-#{$i}
+    @media (min-width: 568px)
+      min-height: $i + px
+  .min-height-md-#{$i}
+    @media (min-width: 768px)
+      min-height: $i + px
+  .min-height-lg-#{$i}
+    @media (min-width: 1024px)
+      min-height: $i + px
+  .min-height-xl-#{$i}
+    @media (min-width: 1280px)
+      min-height: $i + px
+
+// border
+=border($t, $r, $b, $l)
+  @if $t
+    @if $t != initial
+      border-top: $t +px
+  @if $r
+    @if $r != initial
+      border-right: $r +px
+  @if $b
+    @if $b != initial
+      border-bottom: $b +px
+  @if $l
+    @if $l != initial
+      border-left: $l +px
+
+.border-full
+  +border(1, 1, 1, 1)
+.border-top
+  +border(1, initial, initial, initial)
+.border-right
+  +border(initial, 1, initial, initial)
+.border-bottom
+  +border(initial, initial, 1, initial)
+.border-left
+  +border(initial, initial, initial, 1)
+
+.border-collor
+  &-black
+    border-color: #000000
+    border-style: solid
+  &-coffee
+    border-color: #e3dedd
+    border-style: solid
+
+//background
+.background
+  &-coffee
+    background-color: #f5f3f2
 
 .wide
   margin-left: 0
