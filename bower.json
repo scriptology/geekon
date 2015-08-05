@@ -13,6 +13,9 @@
   ],
   "license": "MIT",
   "homepage": "https://github.com/scriptology/geekon",
+  "main": [
+    "app/styles/importer.sass"
+  ],
   "ignore": [
     "**/.*",
     "node_modules",
