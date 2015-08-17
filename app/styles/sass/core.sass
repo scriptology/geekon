@@ -207,18 +207,18 @@
 
 // border
 =border($t, $r, $b, $l)
-  border-width: $t $r $b $l
+  border-width: $t+px $r+px $b+px $l+px
 
 .border-full
   +border(1, 1, 1, 1)
 .border-top
-  +border(1, initial, initial, initial)
+  +border(1, 0, 0, 0)
 .border-right
-  +border(initial, 1, initial, initial)
+  +border(0, 1, 0, 0)
 .border-bottom
-  +border(initial, initial, 1, initial)
+  +border(0, 0, 1, 0)
 .border-left
-  +border(initial, initial, initial, 1)
+  +border(0, 0, 0, 1)
 
 .border-collor
   &-black

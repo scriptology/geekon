@@ -7338,19 +7338,19 @@
     min-height: 152px; } }
 
 .border-full {
-  border-width: 1 1 1 1; }
+  border-width: 1px 1px 1px 1px; }
 
 .border-top {
-  border-width: 1 initial initial initial; }
+  border-width: 1px 0px 0px 0px; }
 
 .border-right {
-  border-width: initial 1 initial initial; }
+  border-width: 0px 1px 0px 0px; }
 
 .border-bottom {
-  border-width: initial initial 1 initial; }
+  border-width: 0px 0px 1px 0px; }
 
 .border-left {
-  border-width: initial initial initial 1; }
+  border-width: 0px 0px 0px 1px; }
 
 .border-collor-black {
   border-color: #000000;
