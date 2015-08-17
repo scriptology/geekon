@@ -7338,25 +7338,26 @@
     min-height: 152px; } }
 
 .border-full {
-  border-top: 1px;
-  border-right: 1px;
-  border-bottom: 1px;
-  border-left: 1px; }
+  border-width: 1 1 1 1; }
 
 .border-top {
-  border-top: 1px; }
+  border-width: 1 initial initial initial; }
 
 .border-right {
-  border-right: 1px; }
+  border-width: initial 1 initial initial; }
 
 .border-bottom {
-  border-bottom: 1px; }
+  border-width: initial initial 1 initial; }
 
 .border-left {
-  border-left: 1px; }
+  border-width: initial initial initial 1; }
 
 .border-collor-black {
   border-color: #000000;
+  border-style: solid; }
+
+.border-collor-gray {
+  border-color: #cccccc;
   border-style: solid; }
 
 .border-collor-coffee {

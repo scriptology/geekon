@@ -207,18 +207,7 @@
 
 // border
 =border($t, $r, $b, $l)
-  @if $t
-    @if $t != initial
-      border-top: $t +px
-  @if $r
-    @if $r != initial
-      border-right: $r +px
-  @if $b
-    @if $b != initial
-      border-bottom: $b +px
-  @if $l
-    @if $l != initial
-      border-left: $l +px
+  border-width: $t $r $b $l
 
 .border-full
   +border(1, 1, 1, 1)
@@ -234,6 +223,9 @@
 .border-collor
   &-black
     border-color: #000000
+    border-style: solid
+  &-gray
+    border-color: #cccccc
     border-style: solid
   &-coffee
     border-color: #e3dedd
