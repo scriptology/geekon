@@ -37,6 +37,7 @@ strong
 
 %link
   cursor: pointer
+
 .link
   @extend %link
   &-l
@@ -95,11 +96,17 @@ small
   @media (max-width: 568px)
     @if $size >= 18
       font-size: $size - 4 + px
-      line-height: $size + 2 + px
+      line-height: $size + px
 
 @for $i from 8 through 80
   .size-#{$i}
     +size($i)
+
+  .line-height-#{$i}
+    line-height: $i + px
+    @media (max-width: 568px)
+      @if $i >= 18
+        line-height: $i - 2 + px
 
 .text-color-white
   color: #ffffff !important
