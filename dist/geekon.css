@@ -11190,20 +11190,20 @@ small {
 .position-center-x {
   display: inline-block;
   position: absolute;
-  top: auto;
+  top: 0;
   left: 50%;
-  -webkit-transform: translate(-50%, -auto);
-  -ms-transform: translate(-50%, -auto);
-  transform: translate(-50%, -auto); }
+  -webkit-transform: translate(-50%, 0);
+  -ms-transform: translate(-50%, 0);
+  transform: translate(-50%, 0); }
 
 .position-center-y-x {
   display: inline-block;
   position: absolute;
   top: 50%;
   left: 50%;
-  -webkit-transform: translate(-50%, -auto);
-  -ms-transform: translate(-50%, -auto);
-  transform: translate(-50%, -auto); }
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%); }
 
 @media (min-width: 568px) {
   .hide-sm {
@@ -11221,17 +11221,17 @@ small {
     position: absolute;
     top: 50%;
     left: 0;
-    -webkit-transform: translate(0, -auto);
-    -ms-transform: translate(0, -auto);
-    transform: translate(0, -auto); }
+    -webkit-transform: translate(0, -50%);
+    -ms-transform: translate(0, -50%);
+    transform: translate(0, -50%); }
   .position-center-y-x-sm {
     display: inline-block;
     position: absolute;
     top: 50%;
     left: 50%;
-    -webkit-transform: translate(-50%, -auto);
-    -ms-transform: translate(-50%, -auto);
-    transform: translate(-50%, -auto); } }
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); } }
 
 @media (min-width: 768px) {
   .hide-md {
@@ -11249,17 +11249,17 @@ small {
     position: absolute;
     top: 50%;
     left: 0;
-    -webkit-transform: translate(0, -auto);
-    -ms-transform: translate(0, -auto);
-    transform: translate(0, -auto); }
+    -webkit-transform: translate(0, -50%);
+    -ms-transform: translate(0, -50%);
+    transform: translate(0, -50%); }
   .position-center-y-x-md {
     display: inline-block;
     position: absolute;
     top: 50%;
     left: 50%;
-    -webkit-transform: translate(-50%, -auto);
-    -ms-transform: translate(-50%, -auto);
-    transform: translate(-50%, -auto); } }
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); } }
 
 @media (min-width: 1024px) {
   .hide-lg {
@@ -11277,17 +11277,17 @@ small {
     position: absolute;
     top: 50%;
     left: 0;
-    -webkit-transform: translate(0, -auto);
-    -ms-transform: translate(0, -auto);
-    transform: translate(0, -auto); }
+    -webkit-transform: translate(0, -50%);
+    -ms-transform: translate(0, -50%);
+    transform: translate(0, -50%); }
   .position-center-y-x-lg {
     display: inline-block;
     position: absolute;
     top: 50%;
     left: 50%;
-    -webkit-transform: translate(-50%, -auto);
-    -ms-transform: translate(-50%, -auto);
-    transform: translate(-50%, -auto); } }
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); } }
 
 @media (min-width: 1280px) {
   .hide-xl {
@@ -11305,14 +11305,14 @@ small {
     position: absolute;
     top: 50%;
     left: 0;
-    -webkit-transform: translate(0, -auto);
-    -ms-transform: translate(0, -auto);
-    transform: translate(0, -auto); }
+    -webkit-transform: translate(0, -50%);
+    -ms-transform: translate(0, -50%);
+    transform: translate(0, -50%); }
   .position-center-y-x-xl {
     display: inline-block;
     position: absolute;
     top: 50%;
     left: 50%;
-    -webkit-transform: translate(-50%, -auto);
-    -ms-transform: translate(-50%, -auto);
-    transform: translate(-50%, -auto); } }
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); } }
