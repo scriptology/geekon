@@ -114,6 +114,21 @@
   &.uppercase
     text-transform: uppercase
 
+// margin
+=margin($t, $r, $b, $l)
+  @if $t
+    @if $t != initial
+      margin-top: $t + px
+  @if $r
+    @if $r != initial
+      margin-right: $r + px
+  @if $b
+    @if $b != initial
+      margin-bottom: $b + px
+  @if $l
+    @if $l != initial
+      margin-left: $l + px
+
 // padding
 =padding($t, $r, $b, $l)
   box-sizing: border-box
@@ -144,7 +159,7 @@
     &:last-child
       padding-bottom: 0
     &:first-child
-      padding-bottom: $i + px 
+      padding-bottom: $i + px
 
 @for $i from 0 through 120
   .padding-bottom-#{$i}
@@ -157,10 +172,22 @@
     +padding(initial, $i, initial, initial)
   .padding-y-#{$i}
     +padding($i, initial, $i, initial)
-  .padding-x-#{$i}
+  .padding-x-#{$i} 
     +padding(initial, $i, initial, $i)
   .padding-yx-#{$i}
     +padding($i, $i, $i, $i)
+
+
+@for $i from 0 through 120
+  .margin-bottom-#{$i}
+    +margin(initial, initial, $i, initial)
+  .margin-top-#{$i}
+    +margin($i, initial, initial, initial)
+  .margin-left-#{$i}
+    +margin(initial, initial, initial, $i)
+  .margin-right-#{$i}
+    +margin(initial, $i, initial, initial)
+
 
 // container-box
 @for $i from 0 through 60
