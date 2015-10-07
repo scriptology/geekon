@@ -1,3 +1,20 @@
+.container
+  padding: 0 10px
+  margin: 0 auto
+  box-sizing: border-box
+
+@media only screen and (min-width: 48em)
+  .container
+    width: 46rem
+
+@media only screen and (min-width: 62em)
+  .container
+    width: 61rem
+
+@media only screen and (min-width: 75em)
+  .container
+    width: 71rem 
+
 .picture
   display: inline-block
   img
@@ -172,7 +189,7 @@
     +padding(initial, $i, initial, initial)
   .padding-y-#{$i}
     +padding($i, initial, $i, initial)
-  .padding-x-#{$i} 
+  .padding-x-#{$i}
     +padding(initial, $i, initial, $i)
   .padding-yx-#{$i}
     +padding($i, $i, $i, $i)
