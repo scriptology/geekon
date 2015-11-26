@@ -804,21 +804,21 @@
   .col-xl-1, .col-xl-1-1, .col-xl-5-5, .col-xl-24-24 {
     width: 100%; } }
 
-.container {
+.g-container {
   padding: 0 10px;
   margin: 0 auto;
   box-sizing: border-box; }
 
 @media only screen and (min-width: 48em) {
-  .container {
+  .g-container {
     width: 46rem; } }
 
 @media only screen and (min-width: 62em) {
-  .container {
+  .g-container {
     width: 61rem; } }
 
 @media only screen and (min-width: 75em) {
-  .container {
+  .g-container {
     width: 71rem; } }
 
 .picture {
