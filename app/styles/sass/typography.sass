@@ -63,10 +63,15 @@
 .thin
   font-weight: 300
 
+=line-height($size)
+  line-height: $size + px
+  @media (max-width: 568px)
+    @if $size >= 18
+      line-height: $size - 4 + px
+
 =size($size)
   font-size: $size + px
   line-height: $size + 2 + px
-  margin-bottom: 0
   @media (max-width: 568px)
     @if $size >= 18
       font-size: $size - 4 + px
