@@ -75,14 +75,6 @@
     @if $size >= 18
       font-size: $size - 4 + px
 
-@for $i from 8 through 80
-  .size-#{$i}
-    +size($i)
-    +line-height($i + 2)
-
-  .line-height-#{$i}
-    +line-height($i)
-
 .text-color-white
   color: #ffffff !important
 .text-color-coffee
